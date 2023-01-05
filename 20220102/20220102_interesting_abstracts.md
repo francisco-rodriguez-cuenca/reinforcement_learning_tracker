@@ -12,8 +12,7 @@ Ueda, M. (2022). Memory-two strategies forming symmetric mutual reinforcement le
 
     VERY interesting
 
-Towards Automating Codenames Spymasters with Deep
-Reinforcement Learning
+Towards Automating Codenames Spymasters with Deep Reinforcement Learning
 
     multi-player co-operative games
 
@@ -59,8 +58,7 @@ Toward multi-target self-organizing pursuit in a partially observable Markov gam
 
 ## Reinforcement Learning Theory
 
-Towards Learning Abstractions via Reinforcement
-Learning
+Towards Learning Abstractions via Reinforcement Learning
 
     Synthesis of efficient communication schemes in multi-agent systems trained by RL
 
