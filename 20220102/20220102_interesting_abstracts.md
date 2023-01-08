@@ -2,16 +2,6 @@
 
 ## Game Theory
 
-Ueda, M. (2022). Memory-two strategies forming symmetric mutual reinforcement learning equilibrium in repeated prisoner's dilemma game. arXiv preprint arXiv:2108.03258v2.
-
-    Analysis of simmetric equilibria of mutual reinforcement learning on the _repeated_ prisioner's dilemma game.
-
-    Uses memory-two deterministic strategies
-
-    The repeated prisioner's dilemma game -> can lead to stronger results by mutual cooperation - folk theorem
-
-    VERY interesting
-
 Towards Automating Codenames Spymasters with Deep Reinforcement Learning
 
     multi-player co-operative games
@@ -47,12 +37,6 @@ Independent and Decentralized Learning in Markov Potential Games
     Focus on the independent and decentralized setting, where players can only observe the realized state and their own reward in every stage
 
     We prove that the policies induced by our learning dynamics converge to a stationary Nash equilibrium in Markov potential games with probability 1.
-
-    VERY interesting
-
-Toward multi-target self-organizing pursuit in a partially observable Markov game
-
-    framework for decentralized multi-agent systems to improve intelligent agent's search and pursuit capabilities
 
     VERY interesting
 
