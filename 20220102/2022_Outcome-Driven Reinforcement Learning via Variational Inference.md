@@ -8,6 +8,8 @@ Sergey levine - Uc, Berkeley
 
 35th Conference on Neural Information Processong Systems (NeurIPS 2021)
 
+      Rudner, T. G., Pong, V., McAllister, R., Gal, Y., & Levine, S. (2021). Outcome-driven reinforcement learning via variational inference. Advances in Neural Information Processing Systems, 34, 13045-13058.
+
 ## Abstract
 
 * Reinforcement Algorithms provide automated acquisition of optimal policies

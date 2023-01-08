@@ -6,6 +6,8 @@ Siva Theja Maguluri
 
 Georgia Tech
 
+    Ko, K., Khodadadian, S., & Maguluri, S. T. (2022). Backward Curriculum Reinforcement Learning. arXiv preprint arXiv:2212.1421
+
 ## Abstract
 
 Current Reinforcement Learning:

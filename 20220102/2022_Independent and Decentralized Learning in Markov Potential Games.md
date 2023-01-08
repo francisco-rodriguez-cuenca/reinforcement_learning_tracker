@@ -5,6 +5,8 @@ Manxi Wu -  Cornell University & UC, Berkeley
 Druv Pai - UC, Berkeley
 Shankar Sastry - UC, Berkeley
 
+    Maheshwari, C., Wu, M., Pai, D., & Sastry, S. (2022). Independent and Decentralized Learning in Markov Potential Games. arXiv preprint arXiv:2205.14590.
+
 ## Abstract
 
 * __Multi-agent Reinforcement Learning Dynamics__ -> Analyze its convergence properties in __infinite-horizon discounted Markov Potential Games__

@@ -11,6 +11,8 @@ AIC 2022, 8th International Workshop on Artificial Intelligence and Cognition
 
 Keywords: Reinforcement Learning, Multi-Agent Systems, Neuro-symbolic systems, emergent communication
 
+    Jergéus, E., Oinonen, L. K., Carlsson, E., & Johansson, M. (2022). Towards Learning Abstractions via Reinforcement Learning. arXiv preprint arXiv:2212.13980.
+
 ## Abstract
 
 * New approach of synthesis of efficient communication schemes in multi-agent rl systems
