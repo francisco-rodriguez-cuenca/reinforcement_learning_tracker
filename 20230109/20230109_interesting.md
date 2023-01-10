@@ -13,17 +13,12 @@
       2. VERY INTERESTING
    2. [Safety Filtering for Reinforcement Learning-based Adaptive Cruise Control](https://arxiv.org/pdf/2301.00884.pdf)
       1. Same as previous
-      2. VERY Interestings
-   3. [Deep reinforcement learning for irrigation scheduling using high-dimensional sensor feedback](https://arxiv.org/pdf/2301.00899.pdf)
-   4.  [Efficient Robustness Assessment via Adversarial Spatial-Temporal Focus on Videos](https://arxiv.org/pdf/2301.00896.pdf)
-   5.  [Large-Scale Traffic Signal Control by a Nash Deep Q-network Approach](https://arxiv.org/pdf/2301.00637.pdf)
-       1.  Interesting
-   6.  [Fairness Guaranteed and Auction-based x-haul and Cloud Resource Allocation in Multi-tenant O-RANs](https://arxiv.org/pdf/2301.00597.pdf)
-   7.  [Physics-Informed Model-Based Reinforcement Learning](https://arxiv.org/pdf/2212.02179.pdf)
+      2. VERY Interesting
+   3.  [Physics-Informed Model-Based Reinforcement Learning](https://arxiv.org/pdf/2212.02179.pdf)
        1.  Very interesting
        2.  v3
        3.  Improve sample efficiency through physics analysis of the environment
-   8.  [Implementing Reinforcement Learning Datacenter Congestion Control in NVIDIA NICs](https://arxiv.org/pdf/2207.02295.pdf)
+   4.  [Implementing Reinforcement Learning Datacenter Congestion Control in NVIDIA NICs](https://arxiv.org/pdf/2207.02295.pdf)
        1.  Congestion control in datacenters via RL
        2.  Interesting and Important (NVIDIA)
 2.  RL + Genetic Algorthms
