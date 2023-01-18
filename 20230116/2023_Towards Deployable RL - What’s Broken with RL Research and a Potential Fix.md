@@ -3,6 +3,10 @@
 * Shie Mannor - Technion and Nvdia Research
 * Aviv Tamar - Technion
 
+A Deployable RL manifesto:
+
+https://avivtamar.substack.com/p/deployablerl
+
 ## Abstract
 
 * Point out difficulties with current research
@@ -43,3 +47,39 @@
     * Impressive singular experiments give a false sense of progress
     * We need more rigorous evaluation of difficulty and success: stability, deployment time and cost, testability and life-cycles are critical
     * The publication standard is that failure cases are almost never reported, stability is impossible to tell, and software design issues are not discussed.
+
+## 2. Generalist Agents vs Deployable RL Systems
+
+* Two views:
+  * __Generalist/AI first__: Future progress will be made by focusing attention on large-scale training of agents that solve diverse problems, with the hope that along the way a generalist agent will develop, and be a useful component in various real world problems
+  * __Deployable RL/RL second__: Seek to design RL algorithms that solve concrete real world problems
+* The five problems of the introduction are relevant to both approaches
+* With the current knowledge of the field, we should seek the second (Deployed RL) approach.
+
+## 3. Principles of Deployable RL Research
+
+* At present, RL is __uneconomical to deploy__.
+* To change it:
+  * Research on how to deploy it effectively
+  * Better understanding of the gains RL brings
+* They propose a constructive model with three general principles:
+  * __Challenges instead of benchmarks__:
+    * _Challenge_: _problem sponsored by a group of researchers from academia/industry, instead of comparing algorithms, solve a real world problem and bring real world value
+    * _Credit for contributing challenges_: A rigorous presentation of a challenge (description, community and supporting platform) should be credited
+    * _Measurable progress is the main criterion for publication_: Every publication should explain the limitations and issues with the proposed algorithm and how it addresses problems specifically.
+    * _Weight class_: Computing power available should be reported to address the significance of the results
+  * __Theory papers shoud address specific challenges__:
+    * The goal of the research should be well justified in terms of its potential impact on real world problems. Should also consider problems that have to do with the life cycle of software such as data acquisition, debugging, testability and performance deterioration.
+  * __Design Patterns Oriented Research__:
+    * Real-world RL based systems should have conceptual solutions to problems where issues such as terstability, debuggability, and other system life-cycle issues are addressed.
+    * We forsee that one way to make significant progress on a challenge would be by developing novel design patterns for it.
+
+## 4. Actionable Next Steps:
+
+* To us, deployable RL means RL that can work at scale, be economically feasibl, and can eventually be put in the field.
+* Here is what you can do:
+  * __Contribute challenges__: 
+    * Requires deep understanding of the application domain, with many disciplines of impact (healthcare, engineering...)
+    * Might require industry and academia joining forces
+  * __Frame your own research__: Frame the research effort within deployable RL principles.
+  * __Critize others' research__: Coordinate with researchers, reviewers and area chairs. Ask how a paper gets the field closer to real-world impact.
