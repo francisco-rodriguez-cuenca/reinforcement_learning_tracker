@@ -78,7 +78,7 @@ GREAT PAPER
   * Discrete action spaces
   * Binary reward signal
   * Dead-ends are derived from a single condition, most real world-scenarios are more complex
-  * Do not make causal claims about the impact of each action
+  * Does not make causal claims about the impact of each action
 * Broader Impact
   * Intended for assistance to domain experts, not for usage in isolation
   * It asseses high-risk situations early enough so that the human decision maker can make a decision
