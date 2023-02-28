@@ -35,7 +35,7 @@ def extract_info(result):
     pdf_link = pdf_links[0].parent.get("href") if len(pdf_links) >= 1 else ""
 
     # Return a tuple containing the title and a dictionary with the pdf link and abstract
-    return title, {"link": pdf_link, "abstract": abstract_full}
+    return title, {"link": pdf_link, "abstract": abstract_full, "string": f"[{title}]({pdf_link})"}
 
 # Map the 'extract_info' function to all elements in the 'all' variable and save the results in a dictionary 'final_dict'
 final_dict = dict(map(extract_info, all))
