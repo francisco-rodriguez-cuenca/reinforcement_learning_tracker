@@ -1,7 +1,5 @@
 # Notes on RL 9
 
-__78__ papers
-
 Using arxiv scraper
 
 ## New papers
@@ -23,5 +21,6 @@ Using arxiv scraper
     1. [The self-organization of selfishness: Reinforcement Learning shows how selfish behavior can emerge from agent-environment interaction dynamics](https://arxiv.org/pdf/2302.14778)
 4. __Healthcare Applications__
     1. [Artificial Intelligence for Dementia Research Methods Optimization](https://arxiv.org/pdf/2303.01949)
+    2. [AR3n: A Reinforcement Learning-based Assist-As-Needed Controller for Robotic Rehabilitation](https://arxiv.org/pdf/2303.00085)
 5. __Natural Language Processing__
     1. [Systematic Rectification of Language Models via Dead-end Analysis](https://arxiv.org/pdf/2302.14003)
