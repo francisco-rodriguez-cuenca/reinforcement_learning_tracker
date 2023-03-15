@@ -29,3 +29,15 @@
       4. Exploration rate
 4. Simulation Results
 5. Discussion
+
+## 5. Discussion
+
+* Two types of free-riding agents:
+  * __Naive free-riders__:
+    * They start by randomly trying out free-riding behaviour, but stay with this behaviour because it is energy minima. They are not able to resort to any other type of behaviour, and if depleted of resources, act randomnly.
+    * Stable selfish trait, although not genetic
+  * __Crafty free-riders__:
+    * They discover free-riding behaviour __after__ the system converges. They know dropper behaviour and resort to it if there is a lack of resources, if it is feasible, they free-ride.
+    * Really selfish but not attributable to any trait since they can behave otherwise.
+
+* Aims to prove that selfish behaviour is better understood as a learned agent-environment interaction than a stable "genetic" trait.
