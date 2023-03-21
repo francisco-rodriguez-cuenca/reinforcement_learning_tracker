@@ -5,8 +5,8 @@ A tutorial basically
 ## Abstract
 
 * Foundation Models trained on data at scale have shown great capabilities
-* Research at the intersection of foundation models and decision-making holds tremendous compromise for creating powerful new systems that can interact effectively with other agents and perform long-term reasoning
-* In this paper, we examine the scope of foundation models for decision making, and provide conceptual tools and technical background for understanding the problem space and exploring new research directions.
+* The intersection of foundation models and decision-making research holds tremendous promise for developing powerful new systems that can effectively interact with other agents and engage in long-term reasoning
+* This paper explores the potential of foundation models for decision-making, offering conceptual tools and technical background to better understand the problem space and identify new research directions.
 
 ## Sections
 
@@ -20,11 +20,11 @@ A tutorial basically
 
 ## 1. Introduction
 
-* New scenarions presented to language models, the core of decision-making:
-  1. How to learn from feedback given by an external entity
-  2. How to adapt to modalities not commonly covered by large language or vision datasets (eg robot actions)
-  3. How to perform long-term reasoning and planning over the future
-* Prior work on decision-making has largely focused on task-specific or _tabula rasa_ settings with limited prior knowledge
+* Language models ace new scenarios that challenge their decision-making  abilities, such as:
+  * Learning from feedback given by external entities.
+  * Adapting to modalities not commonly found in large language or vision datasets, such as robot actions.
+  * Engaging in long-term reasoning and planning for the future.
+* Previous work on decision-making has primarily concentrated on task-specific or tabula rasa settings with limited prior knowledge.
 
 ### 1.1 Structure of this report:
 
