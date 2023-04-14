@@ -122,7 +122,7 @@ Universidade da Beira Interior
 
 * Demonstration Learning is a mixture of Supervised Learning and Reinforcement Learning. The goal of Demonstration learning is to have an agent perform a task by learning from interactions demonstrated by an expert demonstrator and recorded in a dataset.
 * In Demonstration learning, the agent has access to a dataset of $N$ demonstrations. Each demonstration is the sequence of visited states and the respective actions chosen by the expert demonstrator. The agent's policy is estimated from the behaviours shown in the dataset.
-* Types of Demonstration Learning:
+* Families of methods of Demonstration Learning:
   * __Behaviour cloning__:
     * Family of methods where the policy is trained to ouput the demonstrated action for a given state. 
     * The problem becomes a classification for discrete action spaces or a regression for continuous action spaces.
