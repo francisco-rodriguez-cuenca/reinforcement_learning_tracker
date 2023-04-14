@@ -87,14 +87,14 @@ Universidade da Beira Interior
    11. Safety Concerns
 10. Conclusion
 
-## Introduction
+## 1. Introduction
 
 * A policy maps the states of an environment to the actions of an agent. Through Reinforcement Learning, the agent learns the policy through trial-and-error, while in Demonstration Learning, the agent learns from a dataset of interactions on the environment performed by an expert.
 * Through Inverse Reinforcement Learning, demonstrations can also be used to train a reward function, and avoid designing it.
 * Rl is more inefficient and potentially unsafe in real-world learning settings, while Demonstration Learning is completely reliant on demonstrations, which can be difficult to engineer and generalize, and suffers all defects of the demonstrator, including noise, inaccuracies or inconsistencies.
 * Demonstration Learning can be refered as Imitation Learning, Behaviour cloning and some kinds of offline reinforcement Learning.
 
-## Conclusion
+## 10. Conclusion
 
 * Demonstration Learning reduces the overhead of programming by teaching an agent a task through demonstrations
 * Two phases:
@@ -117,3 +117,19 @@ Universidade da Beira Interior
 * Disadvantages:
   * Requires a good framework for creating the dataset and estimating the policy.
 * The authors argue that the researchers focus should be on benchmarks and datasets.
+
+## 2. Problem Definition
+
+* Demonstration Learning is a mixture of Supervised Learning and Reinforcement Learning. The goal of Demonstration learning is to have an agent perform a task by learning from interactions demonstrated by an expert demonstrator and recorded in a dataset.
+* In Demonstration learning, the agent has access to a dataset of $N$ demonstrations. Each demonstration is the sequence of visited states and the respective actions chosen by the expert demonstrator. The agent's policy is estimated from the behaviours shown in the dataset.
+* Types of Demonstration Learning:
+  * __Behaviour cloning__:
+    * Family of methods where the policy is trained to ouput the demonstrated action for a given state. 
+    * The problem becomes a classification for discrete action spaces or a regression for continuous action spaces.
+  * __Inverse Reinforcement Learning__:
+    * Demonstration are used to formulate a reward function.
+    * Reinforcement Learning in which the agent is rewarded for how similar the action is to the one in the dataset for a given state
+  * __Offline Reinforcement Learning__:
+    * The demonstrations include the environment rewards in addition to states and actions.
+    * The policy is learned by maximizing the accumulated reward for all trajectories.
+    * The goal is to learn by interacting with the dataset and generalize instead of naively imitate the expert demonstrator.
