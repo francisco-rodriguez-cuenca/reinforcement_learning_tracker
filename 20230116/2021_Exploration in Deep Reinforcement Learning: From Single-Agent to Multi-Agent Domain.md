@@ -1,4 +1,4 @@
-# Exploration in Deep Reinforcement Learning: From Single-Agent to Multi-Agent Domain
+# Exploration in Deep Reinforcement Learning_ From Single-Agent to Multi-Agent Domain
 
 2021 -IEEE Transactions on Neural Networks and Learning Systems
 
