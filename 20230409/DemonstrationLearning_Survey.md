@@ -91,7 +91,7 @@ Universidade da Beira Interior
 
 * A policy maps the states of an environment to the actions of an agent. Through Reinforcement Learning, the agent learns the policy through trial-and-error, while in Demonstration Learning, the agent learns from a dataset of interactions on the environment performed by an expert.
 * Through Inverse Reinforcement Learning, demonstrations can also be used to train a reward function, and avoid designing it.
-* Rl is more inefficient and potentially unsafe in real-world learning settings, while Demonstration Learning is completely reliant on demonstrations, which can be difficult to engineer and generalize, and suffers all defects of the demonstrator, including from noise, inaccuracies or inconsistencies.
+* Rl is more inefficient and potentially unsafe in real-world learning settings, while Demonstration Learning is completely reliant on demonstrations, which can be difficult to engineer and generalize, and suffers all defects of the demonstrator, including noise, inaccuracies or inconsistencies.
 * Demonstration Learning can be refered as Imitation Learning, Behaviour cloning and some kinds of offline reinforcement Learning.
 
 ## Conclusion
