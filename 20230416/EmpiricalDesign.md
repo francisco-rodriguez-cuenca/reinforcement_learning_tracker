@@ -5,7 +5,7 @@
 * Recent studies have highlighted how popular algorithms are sensitive to hyperparameter sttings and implementation details, and that common empirical practice leads to weak evidence.
 * This manuscript represents both a call to action and a comprehensive resource on how to do good experiments on Reinforcement Learning.
 * Covers:
-  * Statistical Assumptions underlying common performance measures
+  * Statistical assumptions underlying common performance measures
   * how to properly chracterize performance variation and stability
   * hypothesis testing
   * comparing multiple agents
@@ -60,7 +60,27 @@ Appendix:
     1.  Measuring the performance of an agent
     2.  Summarizing performance over time
     3.  Offline returns versus online returns
-   1.  
 
 ## Introduction
 
+* Methodology can impact the credibility of the result, ranging from insightful to misleading
+* The task of evaluating a RL agent is complicated due to its fundamental aspect: an agent interacting with an environment
+  * This interaction makes fair comarisons and scientific reproductivity major challenges in RL
+  * Many of the ideas from classical Machine Learning such as overfitting, cross-validation, and model selection are diffferent or non-existent in RL.
+  * Thus, the community is experiencing the consequences of limited reproductivity, experimenter bias, unreliable algorithms, and exagerated performance claims
+* This document makes a distinction:
+  * __demonstrations of (impressive) engineered systems__:
+    * exploratory science, probing the edges of what is known before following with a more through empirical study
+    * Demonstrating the capabilities of existing algorithms, in hard problems or applications
+    * TD-Gammon 1995
+  * __scientific studies in RL__:
+    * Aim to obtain a deeper understanding of the systems and algorithms
+    * Clear hypothesis that is falsifiable and controls for confounding effects
+    * The aim should not be to show an algorithm is good, but rather understand an algorithm's properties, potentially relative to other algorithms
+    * Complementary to theoretical analysis
+* Many of the widely bemoaned poor empirical practices could be due to mistakenly applying practices common in other communities
+
+* This document aims to be a reference to how to run good experiments in RL 
+  * Walk through important design decisions, common mistakes, hidden biases
+
+![](two-stage-approach.png)
