@@ -61,7 +61,7 @@ Appendix:
     2.  Summarizing performance over time
     3.  Offline returns versus online returns
 
-## Introduction
+## 1. Introduction
 
 * Methodology can impact the credibility of the result, ranging from insightful to misleading
 * The task of evaluating a RL agent is complicated due to its fundamental aspect: an agent interacting with an environment
@@ -84,3 +84,38 @@ Appendix:
   * Walk through important design decisions, common mistakes, hidden biases
 
 ![](two-stage-approach.png)
+
+## 2. Observational Experiments
+
+* In an observational study, the experimenters do not attempt to control the outcome of the study.
+  * Classic example: "bake_off"-style, where several baseline algorithms are tested along several baseline environments.
+* Because much of RL research occurs in determiniistic simulation, we can lose sight of our goal as empiricists.
+* Goals:
+  * Evaluate the quality of a policy through the use of a value function for an specific agent
+  * Repeated trials to understand performance accross multiple agents of a given algorithm, environment and experimental setup
+
+Terminology:
+
+* Agent: single entity interacting with an environment
+* Algorithm: process which produces a set of agents, by specifying their initial conditions and learning rules
+  * Fully-specified algorithm: an algorithm with a specific hyperparameter configuration
+  * Unspecified algorithm. algorithm where some (or all) hyperparameters have not been configured
+
+### 2.1 Experiment one: a demonstration
+
+* How well does algorithm A perform on environment E?
+
+* Decisions to be made:
+  * How many time steps
+  * artificial end of an episode after n steps
+  * how many episodes if an episodic task
+
+* Example:
+  * If an optimal policy can get to the end in 15 time steps and the discount is 0.99, the optimal episodic return is $0.99^(15)$.
+  * Use a fixed number of steps (not episodes!):
+    * To better measure online performance
+    * To avoid highly variable runtimes
+    * Can change depending on what we need to measure
+  * The curve has a step profile because just a single run of the experiment and step return.
+  * Summarized as the aver over the learning cyurve: learning rate : It can change
+
