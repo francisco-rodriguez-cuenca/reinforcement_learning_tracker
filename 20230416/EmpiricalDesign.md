@@ -2,7 +2,7 @@
 
 ## Abstract
 
-* Recent studies have highlighted how popular algorithms are sensitive to hyperparameter sttings and implementation details, and that common empirical practice leads to weak evidence.
+* Recent studies have highlighted how popular algorithms are sensitive to hyperparameter settings and implementation details, and that common empirical practice leads to weak evidence.
 * This manuscript represents both a call to action and a comprehensive resource on how to do good experiments on Reinforcement Learning.
 * Covers:
   * Statistical assumptions underlying common performance measures
@@ -89,7 +89,7 @@ Appendix:
 
 * In an observational study, the experimenters do not attempt to control the outcome of the study.
   * Classic example: "bake_off"-style, where several baseline algorithms are tested along several baseline environments.
-* Because much of RL research occurs in determiniistic simulation, we can lose sight of our goal as empiricists.
+* Because much of RL research occurs in deterministic simulation, we can lose sight of our goal as empiricists.
 * Goals:
   * Evaluate the quality of a policy through the use of a value function for an specific agent
   * Repeated trials to understand performance accross multiple agents of a given algorithm, environment and experimental setup
@@ -117,5 +117,19 @@ Terminology:
     * To avoid highly variable runtimes
     * Can change depending on what we need to measure
   * The curve has a step profile because just a single run of the experiment and step return.
-  * Summarized as the aver over the learning cyurve: learning rate : It can change
+  * Summarized as the average over the learning curve: return rate : It can change
 
+### 2.2 Experiment two: characterizing variations in performance
+
+* Most of the time we are interested in results that capture the variability of our algorithm
+* Two main sources of variability (nature vs nurture)
+  * Agent initialization (often randomized)
+  * Environment stochasticity
+* We do not make claims about an algorithm just from the behaviour of one agent, like scientists don't conclude about a species from one individual rat.
+
+### 2.3 Distributions matter!
+
+* The variability in performance accross agents due to initialization and environment random seed and noise parameters gives rise to a distribution over performance for our algorithm.
+* Important for evaluating the algorithms performance and stablishing the number of experiments.
+
+![](pdf.png)
