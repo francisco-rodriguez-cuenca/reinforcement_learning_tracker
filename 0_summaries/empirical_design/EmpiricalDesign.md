@@ -133,3 +133,18 @@ Terminology:
 * Important for evaluating the algorithms performance and stablishing the number of experiments.
 
 ![](pdf.png)
+
+### 2.4 Reporting Variability in Performance
+
+* Distribution-agnostic approaches:
+  * Upper and lower percentiles (a,b) that reflect the range of performance
+  * **tolerance intervals** and standard deviation
+    * Summarize the range of an algorithm's performance while taking into account uncertainity due to a limited number of samples
+    * Approach their true values as the sample size grows, unlike confidence intervals, which gro to zero
+* It might be useful to measure the mean as well as the median, as the mean is a summary of all agents and the median reflects one agent in particular.
+
+![](mean_vs_median.png)
+
+### 2.4 Reporting confidence in performance estimates
+
+
