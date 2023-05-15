@@ -145,7 +145,7 @@ Terminology:
 
 ![](mean_vs_median.png)
 
-### 2.4 Reporting confidence in performance estimates
+### 2.5 Reporting confidence in performance estimates
 
 * Confidence interval: how certain we are in our estimate of some statistic of the agent's performance. It decreases to zero as number of samples grow
 * It is necessary to ask ourseves the number of samples we need to build a reasonable confidence interval.
@@ -159,5 +159,12 @@ Terminology:
 * Recommendation: Default to bootstrap-based methods for most comparisons, but check the uderlying distributions to see if more powerful methods can be used without breaking assumptions
 
 ![](confidence_intervals.png)
+
+### 2.6 Do we really need more runs?
+
 ![](confidence_intervals_2.png)
 
+* Situations where confidence intervals fail are far from rare, and often we need to do more runs, espcially with agents with highly skewed performance distributions
+* One alternative is to do less runs, but calculate the inter-quartile mean:
+  * More robust to outliers
+  * Careful: ignores potential important extreme values (e.g. 10% of the time the algorithm fails miserably)
