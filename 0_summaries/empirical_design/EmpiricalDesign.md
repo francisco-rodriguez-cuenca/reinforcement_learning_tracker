@@ -147,4 +147,17 @@ Terminology:
 
 ### 2.4 Reporting confidence in performance estimates
 
+* Confidence interval: how certain we are in our estimate of some statistic of the agent's performance. It decreases to zero as number of samples grow
+* It is necessary to ask ourseves the number of samples we need to build a reasonable confidence interval.
+* Two main ways:
+  * T-Student and other statistical methods:
+    * Has some assumptions
+    * Easier to compute and more precise
+  * Bootstrap
+    * Has no assumptions or very little
+    * Needs more samples, needs a minimum of samples
+* Recommendation: Default to bootstrap-based methods for most comparisons, but check the uderlying distributions to see if more powerful methods can be used without breaking assumptions
+
+![](confidence_intervals.png)
+![](confidence_intervals_2.png)
 
