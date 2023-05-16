@@ -168,3 +168,34 @@ Terminology:
 * One alternative is to do less runs, but calculate the inter-quartile mean:
   * More robust to outliers
   * Careful: ignores potential important extreme values (e.g. 10% of the time the algorithm fails miserably)
+
+### 2.7 Deciding on the length of an experiment
+
+* Number of steps studies:
+  * Small number: evaluate early performance
+  * Large number: evaluate if the agent can reach near-optimal performance within a reasonable number of samples
+  * Very large: evaluate if the agent can reach near-optimal performance and remain stable
+* The learning curve tells us:
+  * still increasing: early learning
+  * flattened for many steps: final performance
+  * you can run the agent for longer to see if it eventually levels off, and then report performance for a smaller number of steps to focus on early learning
+* Cutoffs:
+  * Prevent an episode from becoming too long
+  * An agent may be stuck, never finding it's way to the goal, never terminating an episode
+  * A cutoff involves teleporting the agent after max-steps back to the start state, without termination.
+  * Cutoffs can interact with exploration, and in particular very aggressive short cutoffs may misrepresent the performance of agents that get frequently stuck.
+  * Can also be used (though not as necessary) when limiting the number of steps rather than the number of episodes.
+  * With a large cutoff, we are much less likely to make the problem too easy and avoid skewing the results, while obtaining some of the reduced variance to facilitate evaluation.
+
+### 2.0 Key insights: Evaluating a fully specified algorithm
+
+1. A single run of an agent can be informative: consider visualizing individual runs to gain some understanding of your algorithm.
+2. Agent behaviour can be very different across random seeds: report this variability with sample standard deviations or talerance intervals, rather than just the summary statistic.
+3. Confidence interval tell us the confidence on our statistic estimate, not the variability of the agents. They are useful for understanding mean performance, not the behaviour of each agent.
+4. __Do not report standard errors__: low-confidence confidence interval, decide on the confidence interval you need.
+5. The required number of runs depends on your performance distribution, which is unknown. 5 runs is insufficient, but 30 can also be when the distribution is heavily skewed.
+6. Consider reporting Performance vs Steps of Interaction, rather than performance versus episodes. This choice ensures every agent receives the same number of samples.
+7. Deliberately choose the number of steps of interaction to reflect early learning or the ability to learn the optimal policy, rather than what was done in previous work.
+8. Aggressive cutoffs can significantly skew the results.
+
+If we truly want to understand our algorithms and gather sufficient evidence for our claims, we need to take the scientific enterprise seriously. Science is first and foremost about understanding, not picking winners and losers.
