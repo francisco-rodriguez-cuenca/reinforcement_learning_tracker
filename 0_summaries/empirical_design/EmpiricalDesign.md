@@ -190,7 +190,7 @@ Terminology:
 ### 2.0 Key insights: Evaluating a fully specified algorithm
 
 1. A single run of an agent can be informative: consider visualizing individual runs to gain some understanding of your algorithm.
-2. Agent behaviour can be very different across random seeds: report this variability with sample standard deviations or talerance intervals, rather than just the summary statistic.
+2. Agent behaviour can be very different across random seeds: report this variability with sample standard deviations or tolerance intervals, rather than just the summary statistic.
 3. Confidence interval tell us the confidence on our statistic estimate, not the variability of the agents. They are useful for understanding mean performance, not the behaviour of each agent.
 4. __Do not report standard errors__: low-confidence confidence interval, decide on the confidence interval you need.
 5. The required number of runs depends on your performance distribution, which is unknown. 5 runs is insufficient, but 30 can also be when the distribution is heavily skewed.
@@ -199,3 +199,41 @@ Terminology:
 8. Aggressive cutoffs can significantly skew the results.
 
 If we truly want to understand our algorithms and gather sufficient evidence for our claims, we need to take the scientific enterprise seriously. Science is first and foremost about understanding, not picking winners and losers.
+
+## 3. Dealing with Hyperparameters
+
+* Three typical goals of our experiment:
+  * Understanding of the _variety of behaviours_ produced by our algorithms on different hyperparameter settings
+    * There is some knowledge on how to study hyperparameter sensitivity
+  * Understanding the _idealized maximum capabilities_ of an algorithm with optimal hyperparameter settings
+    * Often limited to benchmark problems
+    * Two challenges:
+      * Statistical: stochastic functions are hard to maximize
+      * It is defficult to ensure a level playing field with similar tuning effort between algorithms
+  * Understand the _deployment performance_ that the algorithm is likely to achieve with selected hyperparameters
+    * Greatest challenge:
+      * Unsupervised learning has a general purpose approach for hyperparameter selection
+      * Supervised Learning has cross-validation
+      * Reinforcement Learning is less clear on how to use cross-validationa and others
+    * Additional challenges:
+      * Sim vs real
+      * lots of data with limited compute vs limited data and lots of compute
+      * Safe vs unsafe exploration
+    * Each combination of factors will lead to different methodologies for the selection of hyperparameterss
+
+### 3.1 Understanding hyperparameter sensitivity
+
+* The goal of hyperparameter sensitivity analysis is to help us understand our algorithms.
+  * Not supporting SOTA claims!
+* Classic example: TD($\lambda$)
+  * MonteCarlo: $\lambda \rArr 1$
+  * Original: $\lambda \rArr 0$
+  * Possible takeaways of one study:
+    * 0.9 is optimal
+    * variable performance as $\lambda \rArr 1$
+    * diverges as $\lambda \rArr 0$
+    * performance may suddenly drop off out of a certain range: difficult to tune on other environments
+* In order to evaluate our algorithm with different values of a hyperparameter, we need to collect enough data to provide reasonable estimates of our statistic of choice.
+  * In the most basic setting (one hyperparameter): N runs for each hyper parater H, N x H runs!!! EXPENSIVE
+
+#### Dealing with a single hyperparameter
