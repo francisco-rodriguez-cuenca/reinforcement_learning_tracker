@@ -259,7 +259,23 @@ If we truly want to understand our algorithms and gather sufficient evidence for
   * An alternative choice would be to ask research questions that better match our computational resources.
 *  Example: Does TD with momentum diverge?
    *  Without theory -or an infinite number of runs- we cannot know with absolute certainity that TD with momentum diverges
-   *  With __empiricism__, we accumulate a body of evidence which supports our claim, with the more random seeds we test and the more hyperparameters values we ssweep, the more convincing our body of evidence is.
+   *  With __empiricism__, we accumulate a body of evidence which supports our claim, with the more random seeds we test and the more hyperparameters values we sweep, the more convincing our body of evidence is.
 
 #### Assesing overall hyperparameter sensitivity
+
+* In addition to explicitly visualizing perfomance versus a specific hyperparameter, we can also attempt to assess overall how sensitive an algorithm is to hyperparameters.
+* Jordan et al (2020)
+  * Instead of exhaustively trying all combinations
+  1.  Treat all hyper parameters as unknown values 
+  2.  Model these unknowns as random variables (eg stepsize~Uniform(0,1)) and draw sample hyper parameter configurations
+  3.  The amount that the performance changes as we change the hyperparameters then provides a measurement for the sensitivity of under-specified algorithm on a given problem setting.
+* Tradeoff:
+  * Carefully and systematicallyinvestigate a small number of hyperparameters at a time
+  * We can try to investigate the entire space of hyperparameters with much less detail
+
+```
+    Developing area of research: Appendix D.1. for more detail.
+```
+
+### 3.2 Reporting idealized performance
 
