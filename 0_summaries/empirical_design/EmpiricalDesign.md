@@ -279,3 +279,13 @@ If we truly want to understand our algorithms and gather sufficient evidence for
 
 ### 3.2 Reporting idealized performance
 
+* When we first introduce an algorithm we may want to know how well it can perform, on an environment
+* Very popular but it has several pitfalls:
+  * Estimating the maximum of a stochastic function is challenging and may need a very large number of samples
+    * Many random seeds
+    * Expensive computational costs
+  * RL algorithms are notoriously sensible to hyperparameters and often contain dozens of hyperparameters to tune
+  * When comparing two algorithms, different number of hyperparameters can cause bias in the difference of performance.
+
+#### Maximization bias
+
