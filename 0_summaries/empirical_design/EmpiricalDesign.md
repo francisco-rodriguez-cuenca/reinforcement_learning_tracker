@@ -236,4 +236,30 @@ If we truly want to understand our algorithms and gather sufficient evidence for
 * In order to evaluate our algorithm with different values of a hyperparameter, we need to collect enough data to provide reasonable estimates of our statistic of choice.
   * In the most basic setting (one hyperparameter): N runs for each hyper parater H, N x H runs!!! EXPENSIVE
 
-#### Dealing with a single hyperparameter
+#### Dealing with a single hyperparameter (you define this parameter and get a fully specified algorithm!)
+
+* Summarizing the performance of a hyperparameter:
+  1. Decide on a range
+  2. Specify how values are selected within that range.
+     * Common: stepsizes of 2
+* Possible results:
+  * Smooth curve with a bowl or U-shape: Alright!
+  * Sharp changes in performance: stepsize too wide
+  * If the best performance is at one end: range too narrow -> should be scientifically expanded
+* Interpreting the resulting sensitivity curve:
+  * Reasonably flat for a wide range of hyperparameters:
+    * Insensitive partially specified algorithm
+    * Not challenging to define fully for deployment
+  * If the sensitivity curve shows a large difference of performance within a narrow range:
+    * Highly sensitive partially-specified algorithm
+    * Difficult to define fully for deployment
+* Comprehensive experiments are expensive:
+  * It can be tempting to test only a small number of parameter settings and __compromise__ the empirical design.
+  * __There is no point in running a flawed experiment, even if it is more feasible in terms of computation__
+  * An alternative choice would be to ask research questions that better match our computational resources.
+*  Example: Does TD with momentum diverge?
+   *  Without theory -or an infinite number of runs- we cannot know with absolute certainity that TD with momentum diverges
+   *  With __empiricism__, we accumulate a body of evidence which supports our claim, with the more random seeds we test and the more hyperparameters values we ssweep, the more convincing our body of evidence is.
+
+#### Assesing overall hyperparameter sensitivity
+
