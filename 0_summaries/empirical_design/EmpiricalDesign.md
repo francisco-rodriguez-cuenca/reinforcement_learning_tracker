@@ -279,7 +279,7 @@ If we truly want to understand our algorithms and gather sufficient evidence for
 
 ### 3.2 Reporting idealized performance
 
-* When we first introduce an algorithm we may want to know how well it can perform, on an environment
+* When we first introduce an algorithm we may want to know how well it can perform on an environment
 * Very popular but it has several pitfalls:
   * Estimating the maximum of a stochastic function is challenging and may need a very large number of samples
     * Many random seeds
@@ -288,4 +288,10 @@ If we truly want to understand our algorithms and gather sufficient evidence for
   * When comparing two algorithms, different number of hyperparameters can cause bias in the difference of performance.
 
 #### Maximization bias
+
+* __Maximization bias__ is a form of statistical bias that can arise when estimating a quantity of the form $max_h \Epsilon[G|h]$
+  * $G|h$ -> Performance of the algorithm given a particular hyperparameter configuration
+* The probability that we overestimate the performance of one parameter configuration increases as we increase the number of configurations estimated, thus increasing the reported performance, no longer having an accurate assesment
+* If this was an algorithm we were proposing, we would __mislead the readers by overstating its benefits__
+* If this was a baseline algorithm for comparing, we would do ourselves a disservice by __setting too high of standards and potentially filtering out useful ideas__.
 
