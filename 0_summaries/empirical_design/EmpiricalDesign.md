@@ -295,3 +295,42 @@ If we truly want to understand our algorithms and gather sufficient evidence for
 * If this was an algorithm we were proposing, we would __mislead the readers by overstating its benefits__
 * If this was a baseline algorithm for comparing, we would do ourselves a disservice by __setting too high of standards and potentially filtering out useful ideas__.
 
+#### Issues with the typical two-stage approach
+
+* Two-Stage methodology:
+  1. Extensive hyperparameter sweep to select the best hyper parameter
+  2. Evaluate the best hyperparameter with a new and large number of random seeds
+  3. Report only the results of the second stage
+* Pros:
+  * Unbiased, confident estimate for the performance of the chosen hyperparameter.
+* Drawbacks:
+  1. Wasteful of compute
+     * Many samples of performance are thrown out during the hyperparameter selection (stage 1)
+  2. Likely to underestimate the maximum performance and be overconfident in its estimate
+     * Due to __maximization bias__, we may unintentionally select a suboptimal hyperparameter in the first stage.
+     * We will therefore report in the second stage very tight confidence intervals of a suboptimal parameter, overconfidently underestimating maximum performance.
+
+#### A new approach to obtain unbiased estimates of maximum performance
+
+* Overcoming maximization bias by repeating the hyperparameter sweep multiple times.
+* Expensive approach
+  1. Repeat the hyperparameter sweep M times, with N runs per configuration each sweep.
+  2. Report the spread of all selected hyperparameters as the maximum performance and our confidence interval
+  * Run the algorithm M x H x N: M sweep-then-maximize x H configurations x N runs per configuration
+* Bootstrapping approach
+  1. For every hyperparameter configuration, collect N runs.
+  2. Sample (with replacement) N of those N runs for every configuration
+  3. Compute sample averages for every configuration
+  4. Select the maximizing sample average as an estimate of tuned performance
+  5. Repeat the above procedure by resampling __from the same set of HxN runs__.
+  * Through bootstrap we are capturing variance across all hyperparameters: we do not need as many runs per hyperparameter.
+  * We can therefore select a smaller N than we would typically require for sensitivity analysis, say N=10 instead of N=30.
+
+#### Picking hyperparameter sets fairly
+
+* We want to avoid the pitfall where we allow one algorithm to have much more hyperparameter settings than another.
+* We want our results to reflect the __utility of our algorithm__, not the performance when fitting hyperparameters to a set of environments.
+* No explicit procedure but being fair and justifying decisions
+* At a minimum:
+  1. All algorithms should have the __same number of hyperparameter settings__ in total, irrespective of the number of hyper parameters
+  2. We might test one algorithm with one hyperparameter for 6 settings and another with two hyper parameters for the combination of 2 settings of h1 and 3 settings of h2: 6 settings
