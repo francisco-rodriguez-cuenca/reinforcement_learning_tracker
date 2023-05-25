@@ -334,3 +334,25 @@ If we truly want to understand our algorithms and gather sufficient evidence for
 * At a minimum:
   1. All algorithms should have the __same number of hyperparameter settings__ in total, irrespective of the number of hyper parameters
   2. We might test one algorithm with one hyperparameter for 6 settings and another with two hyper parameters for the combination of 2 settings of h1 and 3 settings of h2: 6 settings
+
+### 3.3 Evaluating Algorithms for deployment
+
+* Evaluating the performance of an RL algorithm under some "realism" constraints, typically a deployment scenario
+* It is not possible to test many hyperparameters in most deployment scenarios, so necessary:
+  * Algorithm approach to set hyperparameters
+  * Hyper-parameter free algorithms
+* There is no general purpose algorithm to choose hyperparameters, unlike unsupervised and supervised (internal cross-validation) learning.
+  
+```
+Appendix d.3 for potential options on hyperparameter selection
+```
+
+* Common approaches:
+  * Default hyperparameters defined in released code-bases
+    * Not unreasonable if the goal is to compare two __systems__ (two codebases), not two algorithms
+    * Might help to choose a suitable codebase
+    * Should be very careful on deployment
+  * Tune hyperparameters on a subset of related simulated environments
+    * Then fix them for a larger set of environments
+    * Little understanding on how one might choose tuning environments
+
