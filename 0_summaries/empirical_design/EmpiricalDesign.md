@@ -270,7 +270,7 @@ If we truly want to understand our algorithms and gather sufficient evidence for
   2.  Model these unknowns as random variables (eg stepsize~Uniform(0,1)) and draw sample hyper parameter configurations
   3.  The amount that the performance changes as we change the hyperparameters then provides a measurement for the sensitivity of under-specified algorithm on a given problem setting.
 * Tradeoff:
-  * Carefully and systematicallyinvestigate a small number of hyperparameters at a time
+  * Carefully and systematically investigate a small number of hyperparameters at a time
   * We can try to investigate the entire space of hyperparameters with much less detail
 
 ```
