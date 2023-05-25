@@ -356,3 +356,13 @@ Appendix d.3 for potential options on hyperparameter selection
     * Then fix them for a larger set of environments
     * Little understanding on how one might choose tuning environments
 
+### 3.0 Key insights: dealing with hyperparameters
+
+1. Unthoughtful treatment of hyperparameters leads to bias: acknowledge this bias.
+2. Select hyperparameters in a way that matches the goals of the experiment, rather than treating them as a nuisance
+3. Hyperparameter sweeps are useful to understand algorithms, not as general-purpose mthod to select hyperparameters
+4. Select ranges of hyperparameters mindfully. Ensure the range is wide enough and expand if necessary
+5. Be innovative about how to communicate effectively hyperparameter sensitivity. Current options include two-dimensional hyperparameter sensitivity curves and all-parameters' violin plots.
+6. It is better to avoid reporting best hyperparameters' performance. To many pitfalls and the possibility of tricking yourself about algorithm quality.
+7. Default hyperparameters are not necessarily appropriate and certainly not fair. More on chapter 4.
+
