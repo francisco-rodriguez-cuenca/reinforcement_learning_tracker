@@ -366,3 +366,17 @@ Appendix d.3 for potential options on hyperparameter selection
 6. It is better to avoid reporting best hyperparameters' performance. To many pitfalls and the possibility of tricking yourself about algorithm quality.
 7. Default hyperparameters are not necessarily appropriate and certainly not fair. More on chapter 4.
 
+## 4. Comparing the performance of multiple algorithms
+
+* When investigating more than one agent, all previous concerns become more serious as we are often making a value judgement on the ranking or relations between multiple agents.
+  * The claims are inherently more nuanced and thus the standard of evidence and rigour goes up a notch.
+* Reasons to compare multiple algorithms:
+  * __Performance ranking of multiple algorithms on a given problem setting or a suite of problem settings__.
+    * "If your problem is similar to this problem, here is the algorithm you should use"
+    * Very difficult (5.2)
+  * __To show than one algorithm (baseline) suffers from some problem, and that a new algorithm does not__.
+    * Classic example: TD (baseline) vs Gradient TD - Sutton et al
+* On this section: challenges and strategies for drawing reliable and robust conclusions on both types of comparison
+
+### 4.1 Designer's curse: with great knowledge comes great responsability
+
