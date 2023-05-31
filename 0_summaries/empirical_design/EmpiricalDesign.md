@@ -380,3 +380,22 @@ Appendix d.3 for potential options on hyperparameter selection
 
 ### 4.1 Designer's curse: with great knowledge comes great responsability
 
+* Designer's curse
+  * You know the algorithm better than anyone
+  * You do not have the same detailed understanding of the baselines you are comparing against, nor knowledge of how to tune them well
+  * Your algorithm is likely to perform better due to your own knowledge and ignorance of the baseline
+* You can counteract it by spending significant effort to get the baselines working well.
+  * It is better to risk giving the baselines a small advantage to mitigate over-claiming
+* Proposing an algorithm to resolve an specific failure case
+  * First claim: __The baseline algorithm experiences that failure case__
+    * Exceptionally challenging to prove: _would this happen for a different choice of hyperparameters?_
+  * Second claim: __Our proposed algorithm solves that failure case__
+    * very easy: we just need a single hyperparameter setting that works!
+  * A truly fair comparison needs spending a significant amount of time understanding the baseline algorithm while requiring less time understanding the proposed algorithm
+  * If we didn't spend enough time we would be building a strawman argument
+* One of the easiest ways to protect against designer's bias is to choose the right environments
+  * We can let the authors of the baseline algorithm do the work here.
+  * It is okay to try a baseline algorithm on a new environment, but you will need to spend significant energy tuning it, and you really cannot be sure you will do a good job.
+  * __Beware of untuned baselines!__
+
+![](untuned_baseline.png)
