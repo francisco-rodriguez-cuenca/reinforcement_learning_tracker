@@ -399,3 +399,5 @@ Appendix d.3 for potential options on hyperparameter selection
   * __Beware of untuned baselines!__
 
 ![](untuned_baseline.png)
+
+### 4.2 The utility of calibration baselines: what does that line mean anyway?
