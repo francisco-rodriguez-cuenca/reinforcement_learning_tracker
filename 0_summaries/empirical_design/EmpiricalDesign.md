@@ -401,3 +401,19 @@ Appendix d.3 for potential options on hyperparameter selection
 ![](untuned_baseline.png)
 
 ### 4.2 The utility of calibration baselines: what does that line mean anyway?
+
+* Comparing the performance of two algorithms is not enough because we may lack the context to understand the results.
+* Anecdote
+  * A reviewer asks for a random agent to be included as to understand the resultss
+  * You should always ask yourself if calibration baselines could make your results easier for the non-expert to interpret
+* Picking the right calibration baseline depends on the research question
+  * Randomized baselines
+  * High-performance baselines
+  * Oracle Baselines
+    * Have access to information your agent does not, setting an unobtainable but interesting performance bar
+    * If your new method approaches the performance of the Oracle baseline in several environments, you can be more confident your algorithm is learning efficiently and that your improvement over baselines is relevant
+* We should not become over-reliant
+  * Example:
+    * Humans have physical constraints and exceeding human performance may be because of fewer constraints.
+  * As we move far from calibration baselines, we must re-evaluate their utility.
+
