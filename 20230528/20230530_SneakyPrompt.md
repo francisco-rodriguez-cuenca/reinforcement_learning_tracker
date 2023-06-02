@@ -36,3 +36,17 @@
 
 ## 8. Conclusion
 
+* First automated framework to evaluate the robustness of existing safety filters via searching the prompt space to find adversarial prompts that bypass safety filter but preserve the semantics
+* Categorize safety filters into three categories:
+  * Text-based
+  * Image-based
+  * image-text-based
+* Evaluation
+  * All existing safety filters are vulnerable to SneakyPrompt
+  * Dall-E closed box safety filter is also vulnerable to SneakyPrompt, as opposed to all other existing attacks
+  * SneakyPrompt outperforms all other algorithms in terms of bypass rate, FID score and number of queries
+* Defenses
+  * Proposes possible defenses such as:
+    * Input filtering
+    * Training improvement
+* Expects text-to-image mantainers to improve their safety filters based on the findings of SneakyPrompt
