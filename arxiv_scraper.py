@@ -5,8 +5,8 @@ import json
 import os
 
 # Set initial and final dates for article search
-init_date = "2023-05-29"
-final_date = "2023-06-04"
+init_date = "2023-06-05"
+final_date = "2023-06-11"
 
 # Construct url using f-strings with specified search parameters
 url = f'https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22Reinforcement+Learning%22&terms-0-field=all&terms-1-operator=AND&terms-1-term=&terms-1-field=all&classification-physics_archives=all&classification-include_cross_list=exclude&date-year=&date-filter_by=date_range&date-from_date={init_date}&date-to_date={final_date}&date-date_type=submitted_date_first&abstracts=show&size=200&order=-announced_date_first'
